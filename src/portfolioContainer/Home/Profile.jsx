@@ -1,4 +1,5 @@
 import Typical from "react-typical";
+import "./profile.css";
 
 const Profile = () => {
   return (
@@ -7,7 +8,6 @@ const Profile = () => {
         <div className="profile-details">
           <div className="colz">
             <div className="colz-icon">
-              <h1>Profile class</h1>
               <a href="https://github.com/Rockingrishu">
                 <i className="fa fa-github"></i>
               </a>
@@ -26,7 +26,7 @@ const Profile = () => {
             <span className="primary-text">
               {" "}
               Hello, I'M
-              <span className="highlighted-text">Hrishikesh Bharti</span>
+              <span className="highlighted-text"> Hrishikesh Bharti</span>
             </span>
           </div>
           <div className="profile-details-role">
@@ -61,7 +61,7 @@ const Profile = () => {
               Hire Me{" "}
             </button>
             <a href="Hrishikesh Bharti.pdf" download="Hrishikesh Bharti.pdf">
-              <button className="btn primary-btn">
+              <button className="btn highlighted-btn">
                 {""}
                 Get Resume{" "}
               </button>
