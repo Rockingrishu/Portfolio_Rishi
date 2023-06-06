@@ -52,7 +52,7 @@ const Profile = () => {
                 />
               </h1>
               <span className="profile-role-tagline">
-                Knack of building applications with Front and Back end
+                A Knack of building applications with Front and Back end
                 operations.
                 <br />
                 Also love to play with data with Machine Learning.
