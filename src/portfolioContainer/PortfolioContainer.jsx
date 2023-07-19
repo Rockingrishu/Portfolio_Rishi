@@ -1,6 +1,6 @@
 import { TOTAL_SCREENS } from "../utilities/commonUtils";
 
-const PortfolioContainer = () => {
+export default function PortfolioContainer() {
   const mapAllScreens = () => {
     return TOTAL_SCREENS.map((screen) =>
       screen.component ? (
@@ -14,7 +14,6 @@ const PortfolioContainer = () => {
       )
     );
   };
-  return <div className="profile-container">{mapAllScreens()}</div>;
-};
 
-export default PortfolioContainer;
+  return <div className="portfolio-container">{mapAllScreens()}</div>;
+}

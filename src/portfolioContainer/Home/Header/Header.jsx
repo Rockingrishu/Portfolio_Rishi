@@ -3,12 +3,12 @@ import ScrollService from "../../../utilities/ScrollService";
 import {
   TOTAL_SCREENS,
   GET_SCREEN_INDEX,
-} from "../../../utilities/commonUtils";
+} from "../../../utilities/commonUtils.jsx";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./header.css";
 
-const Header = () => {
+export default function Header() {
   const [selectedScreen, setSelectedScreen] = useState(0);
   const [showHeaderOptions, setShowHeaderOptions] = useState(false);
 
@@ -22,24 +22,24 @@ const Header = () => {
     ScrollService.currentScreenBroadCaster.subscribe(updateCurrentScreen);
 
   const getHeaderOptions = () => {
-    return TOTAL_SCREENS.map((screen, i) => {
+    return TOTAL_SCREENS.map((screen, i) => (
       <div
         key={screen.screen_name}
         className={getHeaderOptionsClass(i)}
         onClick={() => switchScreen(i, screen)}
       >
         <span>{screen.screen_name}</span>
-      </div>;
-    });
+      </div>
+    ));
   };
 
   const getHeaderOptionsClass = (index) => {
     let classes = "header-option";
     if (index < TOTAL_SCREENS.length - 1) {
-      classes += "header-option-seperator";
+      classes += " header-option-seperator";
     }
     if (selectedScreen === index) {
-      classes += "selected-header-option";
+      classes += " selected-header-option";
       return classes;
     }
   };
@@ -86,6 +86,4 @@ const Header = () => {
       </div>
     </div>
   );
-};
-
-export default Header;
+}
